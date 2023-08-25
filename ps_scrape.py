@@ -120,7 +120,7 @@ for user in recipients_requests.keys():
 
 sender_email = "petros.newsletter@gmail.com"
 #comment out load_dotenv() for the cloud version. Theoretically, I will have set up the pass as environment variable, so just the code below should be able to fetch it?
-load_dotenv()
+#load_dotenv()
 password = os.environ['email_pass']  # do not change, this is a specific gapps password
 
 
