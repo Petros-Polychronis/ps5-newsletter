@@ -1,3 +1,5 @@
+#!/bin/usr/python
+
 ## IMPORT LIBRARIES
 import pandas as pd
 import requests
@@ -14,7 +16,7 @@ import os
 # READ EMAILS AND TRACKED PS STORE PRODUCTS
 
 ## Note: file json file named "recipients_requests.json" must exist in the same folder as the script.
-with open('ps5-newsletter/recipients_requests.json') as json_file:
+with open('/home/ec2-user/ps5-newsletter/recipients_requests.json') as json_file:
     recipients_requests = json.load(json_file)
 
 # SCRAPING
@@ -82,7 +84,7 @@ with open("output.json", "w") as outfile:
 # SENDING EMAILS
 
 ## PT1 OPEN TEMPLATE
-template = open('ps5-newsletter/email.html')
+template = open('/home/ec2-user/ps5-newsletter/email.html')
 soup = BeautifulSoup(template.read(), "html.parser")
 game_temp = soup.find_all('tr')[6]
 
