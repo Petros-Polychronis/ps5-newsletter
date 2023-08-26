@@ -77,7 +77,7 @@ for user in recipients_requests.keys():
         users[user] = data
 
 # SAVE SCRAPED INFO IN OUTPUT FILE
-with open("output.json", "w") as outfile:
+with open("/home/ec2-user/ps5-newsletter/output.json", "w") as outfile:
     json.dump(users, outfile)
 
 
