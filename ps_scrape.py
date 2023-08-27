@@ -1,4 +1,4 @@
-#!/bin/usr/python
+#!/bin/usr/env python
 
 ## IMPORT LIBRARIES
 import pandas as pd
