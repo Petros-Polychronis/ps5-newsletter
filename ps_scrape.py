@@ -1,5 +1,3 @@
-#!/bin/usr/ python3
-
 ## IMPORT LIBRARIES
 import pandas as pd
 import requests
