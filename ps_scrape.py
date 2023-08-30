@@ -107,7 +107,7 @@ for user in recipients_requests.keys():
             game_temp.img['src'] = data[game]['pic_link']
             game_temp.find('a').string.replaceWith(data[game]['game_title'])
             game_temp.find('a')['href'] = game
-            game_temp.p = data[game]['sale_duration']
+            game_temp.find('p').string.replaceWith(data[game]['sale_duration'])
             game_temp.find('span').string.replaceWith(data[game]['final_price'])
 
             newsletter_content+= str(game_temp).replace('\n', '')
