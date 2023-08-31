@@ -104,11 +104,12 @@ for user in recipients_requests.keys():
     for game in recipients_requests[user]:
         
         if users[user][game]['sale'] ==1:
-            game_temp.img['src'] = data[game]['pic_link']
-            game_temp.find('a').string.replaceWith(data[game]['game_title'])
+            game_temp.img['src'] = users[user][game]['pic_link']
+            game_temp.find('a').string.replaceWith(users[user][game]['game_title'])
             game_temp.find('a')['href'] = game
-            game_temp.find('p').string.replaceWith(data[game]['sale_duration'])
-            game_temp.find('span').string.replaceWith(data[game]['final_price'])
+            game_temp.find('p').string.replaceWith(users[user][game]['sale_duration'])
+            game_temp.find('span').string.replaceWith(users[user][game]['final_price'])
+
 
             newsletter_content+= str(game_temp).replace('\n', '')
 
